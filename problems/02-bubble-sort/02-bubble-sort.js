@@ -19,6 +19,7 @@ function bubbleSort(numArray)
             }
         }
     }
+    return numArray
 }
 
 
@@ -26,6 +27,5 @@ var arr = [1,4,2,7,4,100 , 500,3, 77, 1]
 
 console.log(arr);
 
-bubbleSort(arr)  // Here we are sorting array
 
-console.log(arr);
+console.log(bubbleSort(arr));  // Here we are sorting array
