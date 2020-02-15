@@ -38,4 +38,4 @@ function substring(someStr, startIndex, endIndex) {
     return newString;
 }
 
-console.log(substring("4467", -3, 3));
+console.log(substring('hello', 0, 3));
