@@ -8,6 +8,6 @@ function spliceElement(someArr, index) {
   return someArr ;
 }
 
-var fruits = ["element1", "element2", "element3", "element4"];
+var elements = ["element1", "element2", "element3", "element4"];
 
-console.log( spliceElement(fruits, 3)  );
+console.log( spliceElement(elements, 3)  );
