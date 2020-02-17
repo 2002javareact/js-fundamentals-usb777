@@ -20,26 +20,28 @@ Example for printShape("Diamond", 5, "*");
  ***
   * 
 */
-function printShape(shape, height, character) {
+function printShape(shape,  height = 5, character) {
+ 
   let sym = ""
-  if (height>=0) {height =1}
+  this.h = height
+  if (h<=0) {h =1}
 
   switch (shape) 
   {
     case "Square" :   {
 
       //square
-    let sym = ""
+  
     let symSQuare=""
     
-    for (let  i=0; i<height; i++) 
+    for (let  i=0; i<h; i++) 
     {
       sym = ""
  
-      for (let j=0;j<height;j++)
+      for (let j=0;j<h;j++)
          { 
           sym=sym+"#"
-          if (j===(height-1))
+          if (j===(h-1))
           {
             symSQuare = sym
           }
@@ -54,7 +56,8 @@ function printShape(shape, height, character) {
       
       break;}
 
-    case "Triangle" :   {  for (let  i=0; i<height; i++) 
+    case "Triangle" :   {  
+                            for (let  i=0; i<h; i++) 
                             {
         
                               sym=sym + character          
@@ -68,7 +71,7 @@ function printShape(shape, height, character) {
 var x, y, space = "",
  height = 6,
 m = height - 1;
-for (x = 1; x <= height; x++)
+for (x = 1; x <= h; x++)
 {
   for (y = m; y >= 1; y--) 
   {
@@ -99,3 +102,7 @@ for (x = 1; x <= height; x++)
 
 
 printShape("Triangle", 4, "*");
+
+printShape("Square", 5, "@");
+
+printShape("Diamond", 4, "*");
