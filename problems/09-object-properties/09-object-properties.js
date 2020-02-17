@@ -12,8 +12,10 @@ function objectProperties(someObj) {
 
 } 
 
+let  person  = {age: 10, adrress: "42 str , NY, NY"}
 
 
 
+console.log(person);
 
 
