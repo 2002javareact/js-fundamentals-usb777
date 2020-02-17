@@ -31,15 +31,15 @@ function printShape(shape, height, character) {
       //square
     let sym = ""
     let symSQuare=""
-    let size = 5
-    for (let  i=0; i<size; i++) 
+    
+    for (let  i=0; i<height; i++) 
     {
       sym = ""
  
-      for (let j=0;j<size;j++)
+      for (let j=0;j<height;j++)
          { 
           sym=sym+"#"
-          if (j===(size-1))
+          if (j===(height-1))
           {
             symSQuare = sym
           }
@@ -98,3 +98,4 @@ for (x = 1; x <= height; x++)
 }
 
 
+printShape("Triangle", 4, "*");
