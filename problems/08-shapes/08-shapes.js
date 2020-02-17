@@ -67,25 +67,21 @@ function printShape(shape,  height = 5, character) {
     case "Diamond" :   {
       
 
-      
-var x, y, space = "",
- height = 6,
-m = height - 1;
-for (x = 1; x <= h; x++)
-{
-  for (y = m; y >= 1; y--) 
-  {
-    space = space + (" ");
-  } //y
-    m--;
-   for (let k = 1; k <= x * 2 - 1; k++) 
-      {
-        sym = sym + character
+  
+  //var width = 11;
+  var num = (h+1)/2;
+  
+  for (let i = num-1; i >-num; i--) {
+  for (let j = num-Math.abs(i); j < num; j++) {
+    sym+=' '
+    }
+      for (let j = 0; j < 2*(num-Math.abs(i))-1; j++) 
+      { //2*num-(2*Math.abs(i) +1) simplified to 2*(num-Math.abs(i))-1
+        sym+=character;
       }
-    console.log(space + sym)
-    space = '';
-    sym = "";
-} //x
+        sym+="\n";
+      }
+          console.log(sym);
       
       
       
@@ -105,4 +101,21 @@ printShape("Triangle", 4, "*");
 
 printShape("Square", 5, "@");
 
-printShape("Diamond", 4, "*");
+printShape("Diamond", 6, "*");
+
+/*
+var stars='';
+var width = 11;
+var num = (width+1)/2;
+for (let i = num-1; i >-num; i--) {
+for (let j = num-Math.abs(i); j < num; j++) {
+stars+=' '
+}
+for (let j = 0; j < 2*(num-Math.abs(i))-1; j++) { //2*num-(2*Math.abs(i) +1) simplified to 2*(num-Math.abs(i))-1
+stars+="*";
+}
+stars+="\n";
+}
+console.log(stars);
+
+*/
